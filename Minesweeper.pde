@@ -70,24 +70,27 @@ public void displayLosingMessage()
     { 
         bombs.get(i).setClicked(true); 
     } 
-    buttons[10][8].setLabel("Y");
+    buttons[10][8].setLabel("L");
     buttons[10][9].setLabel("O"); 
-    buttons[10][10].setLabel("U"); 
-    buttons[11][8].setLabel("L"); 
-    buttons[11][9].setLabel("O"); 
-    buttons[11][10].setLabel("S"); 
-    buttons[11][11].setLabel("E"); 
+    buttons[10][10].setLabel("S"); 
+    buttons[11][8].setLabel("E"); 
+    buttons[11][9].setLabel("R"); 
+    buttons[11][10].setLabel("!"); 
+    buttons[11][11].setLabel("!"); 
+    buttons[11][12].setLabel("!");
 }
 public void displayWinningMessage()
 {
     //your code here
-    buttons[10][8].setLabel("Y");
-    buttons[10][9].setLabel("O"); 
-    buttons[10][10].setLabel("U"); 
-    buttons[11][8].setLabel("W"); 
-    buttons[11][9].setLabel("I"); 
-    buttons[11][10].setLabel("N"); 
+    buttons[10][8].setLabel("W");
+    buttons[10][9].setLabel("I"); 
+    buttons[10][10].setLabel("N"); 
+    buttons[11][8].setLabel("N"); 
+    buttons[11][9].setLabel("E"); 
+    buttons[11][10].setLabel("R"); 
     buttons[11][11].setLabel("!"); 
+    buttons[11][12].setLabel("!");
+    buttons[11][13].setLabel("!");
 }
 
 public class MSButton
@@ -157,11 +160,11 @@ public class MSButton
         if (marked)
             fill(0);
          else if( clicked && bombs.contains(this) ) 
-             fill(255,0,0);
+             fill(128,255,0);
         else if(clicked)
-            fill( 200 );
+            fill( 180 );
         else 
-            fill( 100 );
+            fill( 80 );
 
         rect(x, y, width, height);
         fill(0);
